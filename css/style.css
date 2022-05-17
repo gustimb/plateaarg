@@ -8,7 +8,6 @@
 /*body*/
 
 body {
-    background-color: #e0ffff;
     font-family: 'Ubuntu', sans-serif;
     height: auto;
     width: auto;
@@ -51,7 +50,7 @@ header {
     height: 90px;
 }
 
-h1{
+h1 {
     text-transform: uppercase;
 }
 
@@ -78,6 +77,8 @@ nav ul li {
 /*main*/
 
 main {
+    background: rgb(246, 245, 245);
+    background: linear-gradient(180deg, rgba(246, 245, 245, 1) 25%, rgba(211, 224, 234, 1) 95%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -244,7 +245,7 @@ textarea {
 footer {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/background-01.jpg);
+    background-color: #354c5e;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
