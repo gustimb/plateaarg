@@ -1,0 +1,36 @@
+@import "utilities/variables";
+@import "header";
+@import "navbar";
+@import "mainIndex";
+@import "footer";
+@import "mediaqueries";
+
+
+/*reset*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*body*/
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    height: auto;
+    width: auto;
+}
+
+/*div contenedor*/
+
+.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem 0.1fr 2fr 10rem;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+}
+

@@ -1,0 +1,19 @@
+.contenedor {    
+    header {
+        background-image: url(../img/background-01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: header;
+        height: 100%;
+        
+        .logoPrincipal {
+            padding: $medida-a;
+            margin: $medida-a;
+            height: 90px;
+        }
+    }
+}

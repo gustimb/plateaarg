@@ -42,9 +42,10 @@ header {
     justify-content: center;
     align-items: center;
     grid-area: header;
-
     height: 100%;
 }
+
+/* logo principal */
 
 .logoPrincipal {
     padding: 1rem;
@@ -438,7 +439,7 @@ footer {
             padding: 0;
         }
 
-        /*main nosotros 600px*/
+        /*main nosotros 1200px*/
 
         .divNosotros {
             width: 50%;

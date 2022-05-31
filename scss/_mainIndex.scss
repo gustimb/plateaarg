@@ -1,0 +1,75 @@
+.contenedor {
+    main {
+        background: linear-gradient(180deg, rgba(246, 245, 245, 1) 25%, rgba(211, 224, 234, 1) 95%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        grid-area: main;
+        height: auto;
+
+        .mainTitle {
+            margin: $medida-a*2;
+            text-align: center;
+
+            .mainSubtitle {
+                text-transform: uppercase;
+            }
+        }
+
+        .divIndex {
+            width: 98%;
+            justify-content: center;
+
+            .mainIframe {
+                width: 100%;
+            }
+
+            .homeP {
+                margin: 2.5rem 1rem;
+                text-align: justify;
+                font-size: $medida-a;
+            }
+        }
+
+        .divWpp {
+            .whatsappIcon {
+                display: none;
+                width: 70px;
+                position: fixed;
+                top: 80%;
+                right: 15px;
+                animation-name: shake;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            @keyframes shake {
+
+                from {
+                    transform: translate(0px, 0px);
+                }
+
+                92% {
+                    transform: translate(0px, 0px);
+                }
+
+                94% {
+                    transform: translate(0px, 5px);
+                }
+
+                96% {
+                    transform: translate(0px, 0px);
+                }
+
+                98% {
+                    transform: translate(0px, -5px);
+                }
+
+                to {
+                    transform: translate(0px, 0px);
+                }
+            }
+        }
+    }
+}
