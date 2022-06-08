@@ -1,0 +1,49 @@
+.divFormulario {
+    width: 90%;
+    margin-bottom: 3rem;
+
+    form {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        height: auto;
+        padding: 1.5rem;
+        box-shadow: 3px 3px 5px black;
+
+        div {
+
+            label,
+            input,
+            select {
+                height: 1.7rem;
+                width: 100%;
+                margin: 0.2rem 0rem;
+                border-radius: 5px;
+            }
+
+            label {
+                font-weight: bold;
+            }
+
+            textarea {
+                max-width: 100%;
+                min-width: 100%;
+                max-height: 7rem;
+                min-height: 7rem;
+                margin: 0.2rem 0rem;
+                border-radius: 5px;
+            }
+
+        }
+
+        .divBotones {
+            .botones {
+                padding: 0.5rem;
+                height: auto;
+                background-color: #354c5e;
+                color: white;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+        }
+    }
+}
