@@ -1,19 +1,83 @@
 .divFormulario {
-    width: 90%;
-    margin-bottom: 3rem;
+    margin: 3rem;
+    background: $bgDivPrincipal;
+    width: 100%;
+    @include flex (flex, column, auto, center);
+    transition: $transicionGeneral;
+
+    .encontranos {
+        width: 100%;
+        padding: 2rem 1rem;
+        background-color: #000000;
+        background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+
+        .encontranosTitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: $colorClaro1;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 1px solid $colorClaro1;
+        }
+
+        .contactSolid {
+            @include flex (flex, row, center, auto);
+
+            .contactBox1 {
+                .formSocialLink {
+                    display: flex;
+                    width: auto;
+
+                    .formSocialIcon {
+                        margin: 0.5rem;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .contactBox2 {
+                .formSocialLink {
+                    display: flex;
+                    width: auto;
+                    color: $colorClaro1;
+                    text-decoration: none;
+
+                    .formLinkText {
+                        @include flex (flex, row, auto, center);
+                        height: 30px;
+                        margin: 0.5rem;
+                        transition: $transicionGeneral;
+                    }
+
+                    .formLinkText:hover {
+                        color: #3bace6;
+                    }
+                }
+            }
+        }
+    }
 
     form {
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
-        height: auto;
-        padding: 1.5rem;
-        box-shadow: 3px 3px 5px black;
+        width: 100%;
+        padding: $medida-a*2 $medida-a;
+
+        .dejanosTitle {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 1px solid $colorClaro1;
+            color: $colorClaro1;
+        }
 
         div {
 
             label,
             input,
             select {
+                color: $colorClaro1;
                 height: 1.7rem;
                 width: 100%;
                 margin: 0.2rem 0rem;
@@ -21,7 +85,12 @@
             }
 
             label {
-                font-weight: bold;
+                font-weight: 200;
+            }
+
+            input,
+            select {
+                color: $colorOscuro1;
             }
 
             textarea {
@@ -32,17 +101,17 @@
                 margin: 0.2rem 0rem;
                 border-radius: 5px;
             }
-
         }
 
         .divBotones {
             .botones {
                 padding: 0.5rem;
                 height: auto;
-                background-color: #354c5e;
-                color: white;
-                font-weight: bold;
+                background-color: #000000;
+                background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+                font-weight: 200;
                 border-radius: 10px;
+                color: $colorClaro1;
             }
         }
     }

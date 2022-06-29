@@ -1,11 +1,53 @@
 .listaServicios {
-    margin-bottom: 3rem;
+    margin: 3rem;
+    padding: 2rem 0;
+    background: $bgDivPrincipal;
+    width: 100%;
+    @include flex (flex, column, center, auto);
+    transition: $transicionGeneral;
 
-    ul {
-        li {
-            list-style-type: none;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+    .boxServcio1 {
+        margin: 1rem 0.5rem;
+        height: 25rem;
+        @include flex (flex, column, auto, auto);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: $sombraBoxPrincipal;
+
+        .imgServicio {
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transition: all 800ms ease-in-out;
         }
+
+        .imgServicio:hover {
+            transform: scale(1.2);
+        }
+
+        .titleServicio {
+            height: 80px;
+            background: rgba(05, 05, 05, 0.95);
+            color: $colorClaro1;
+            font-size: $medida-a;
+            padding: $medida-a;
+            font-weight: 500;
+            @include flex (flex, row, center, center);
+            text-align: center;
+            z-index: 1;
+            margin-top: -100px;
+        }
+    }
+
+    .boxServcio2 {
+        @extend .boxServcio1;
+    }
+
+    .boxServcio3 {
+        @extend .boxServcio1;
+    }
+
+    .boxServcio4 {
+        @extend .boxServcio1;
     }
 }

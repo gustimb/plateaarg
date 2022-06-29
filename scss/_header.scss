@@ -1,19 +1,40 @@
-.contenedor {    
+.contenedor {
     header {
-        background-image: url(../img/background-01.jpg);
-        background-repeat: no-repeat;
+        background-image: url(../img/p03.jpg);
         background-position: center;
-        background-size: 100% 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include flex (flex, row, center, center);
         grid-area: header;
-        height: 100%;
-        
+        margin-bottom: -1px;
+        min-height: 160px;
+
         .logoPrincipal {
             padding: $medida-a;
             margin: $medida-a;
-            height: 90px;
+            height: 115px;
+            filter: drop-shadow($sombraDrop);
+        }
+
+        .divIcons {
+            display: none;
+            width: 50%;
+            height: 100%;
+
+            .socialLink {
+                height: 25px;
+                margin: 1rem 1rem 0 0;
+
+                .socialIcon {
+                    width: 25px;
+                    filter: drop-shadow($sombraDrop);
+                    transition: $transicionGeneral;
+                }
+
+                .socialIcon:hover {
+                    transform: translate(0, -5px);
+                }
+            }
         }
     }
 }
