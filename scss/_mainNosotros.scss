@@ -1,25 +1,23 @@
 .divNosotros {
-    width: 95%;
-    height: auto;
-    margin-bottom: 3rem;
+    width: 100%;
+    margin: 3rem;
+    padding: 1rem 0;
     text-align: center;
+    background: linear-gradient($bgDivPrincipal, $bgDivPrincipal),
+        url(../img/pa00sombra3.png);
+    background-repeat: no-repeat;
+    background-position-y: 15%;
+    background-size: 100%;
+    transition: $transicionGeneral;
 
     .divParrafo {
-        background: linear-gradient(rgba(53, 75, 89, 0.75), rgba(53, 75, 89, 0.95)),
-            url(../img/pa00sombra3.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        border-radius: 10px;
-        width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
 
         .pCont {
             .pNosotros {
-                color: white;
+                color: $colorClaro1;
                 font-size: 1.1rem;
-                margin: 0;
-                text-shadow: 1px 2px 5px black;
+                margin: 1rem;
             }
         }
 
@@ -32,17 +30,17 @@
 
     .contenedorItemNosotos {
         .itemNosotros1 {
+            color: $colorOscuro1;
             background-color: rgba(0, 166, 221, 1);
             border-radius: 10px;
-            padding: 0.5rem;
-            margin: 0.5rem 0rem;
+            padding: $medida-a/2;
+            margin: $medida-a $medida-a/2;
             grid-area: a;
-            display: none;
 
             .itemNosTitle {
+                color: $colorOscuro1;
                 font-size: 1.1rem;
                 font-weight: bolder;
-                text-shadow: 0.5px 0.5px 0.5px rgb(46, 46, 46);
             }
         }
 
@@ -50,62 +48,30 @@
             @extend .itemNosotros1;
             background-color: rgba(54, 185, 228, 1);
             grid-area: b;
-
-            .itemNosTitle {
-                font-size: 1.1rem;
-                font-weight: bolder;
-                text-shadow: 0.5px 0.5px 0.5px rgb(46, 46, 46);
-            }
         }
 
         .itemNosotros3 {
             @extend .itemNosotros1;
             background-color: rgba(90, 197, 233, 1);
             grid-area: c;
-
-            .itemNosTitle {
-                font-size: 1.1rem;
-                font-weight: bolder;
-                text-shadow: 0.5px 0.5px 0.5px rgb(46, 46, 46);
-            }
         }
 
         .itemNosotros4 {
             @extend .itemNosotros1;
             background-color: rgba(126, 209, 238, 1);
             grid-area: d;
-
-            .itemNosTitle {
-                font-size: 1.1rem;
-                font-weight: bolder;
-                text-shadow: 0.5px 0.5px 0.5px rgb(46, 46, 46);
-            }
         }
 
         .itemNosotros5 {
             @extend .itemNosotros1;
             background-color: rgba(159, 221, 242, 1);
             grid-area: e;
-
-            .itemNosTitle {
-                font-size: 1.1rem;
-                font-weight: bolder;
-                text-shadow: 0.5px 0.5px 0.5px rgb(46, 46, 46);
-            }
         }
 
         .itemNosotros6 {
             @extend .itemNosotros1;
             background-color: rgba(197, 234, 247, 1);
             grid-area: f;
-
-            .itemNosTitle {
-                font-size: 1.1rem;
-                font-weight: bolder;
-                text-shadow: 0.5px 0.5px 0.5px rgb(46, 46, 46);
-            }
         }
-
     }
-
 }

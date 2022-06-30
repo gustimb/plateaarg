@@ -1,32 +1,54 @@
 .contenedor {
     footer {
-        display: flex;
-        flex-direction: column;
-        background-color: #354c5e;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 5px;
+        @include flex (flex, column, center, center);
+        background-color: #074b7c;
         text-align: center;
-        justify-content: center;
-        color: white;
+        color: $colorClaro1;
+        padding: 5px;
+        margin-top: -1px;
         grid-area: footer;
 
-        .footerMain {
-            font-size: 0.8rem;
-            font-weight: 200;
-            margin: $medida-a/2;
+        .footerSocial {
+            margin: 30px;
+            width: 70%;
+            @include flex (flex, row, center, auto);
 
-            .link-instagram {
-                color: white;
+            .footerSocialLink {
+                width: auto;
                 text-decoration: none;
+                @include flex (flex, row, auto, center);
+                margin: 10px 25px;
+
+                .FooterSocialIcon {
+                    width: 25px;
+                    margin-right: 10px;
+                    filter: drop-shadow($sombraDrop);
+                }
+
+                .linkText {
+                    display: none;
+                    font-size: 12px;
+                    color: $colorClaro1;
+                    text-shadow: $sombraDrop;
+                }
             }
         }
 
-        .footerRr {
-            font-size: 0.6rem;
-            font-weight: 200;
-            margin: $medida-a/2;
+        .footerH {
+            padding: 20px;
+            border-top: 2px solid $colorClaro1;
+
+            .footerMain {
+                font-size: 0.8rem;
+                font-weight: 200;
+                margin: $medida-a/2;
+            }
+
+            .footerRr {
+                font-size: 0.6rem;
+                font-weight: 200;
+                margin: $medida-a/2;
+            }
         }
     }
 }

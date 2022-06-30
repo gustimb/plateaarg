@@ -1,6 +1,5 @@
 @media screen and (min-width:600px) {
     .contenedor {
-        grid-template-rows: 10rem 0.1fr 2fr 10rem;
 
         //nav 600px
         .navbar {
@@ -17,46 +16,47 @@
 
         //main 600px
         main {
-            .mainTitle {
-                margin: 3rem 2rem;
-                text-align: center;
-            }
 
             //main index 600px
             .divIndex {
-                width: 75%;
+                width: 80%;
 
                 .mainIframe {
-                    width: 100%;
+                    width: 80%;
                 }
 
-                .homeP {
-                    margin: 0;
-                    padding: 4rem;
-                    font-size: 1rem;
+                .divPIndex {
+
+                    .pIndex1,
+                    .pIndex2 {
+                        flex-direction: row;
+                        width: 80%;
+                        padding: 1rem;
+
+                        .homeP {
+                            margin: 0;
+                            padding: 1rem;
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
 
             .divWpp {
-                .whatsappIcon {
-                    display: block;
+                .linkWpp {
+                    .whatsappIcon {
+                        display: block;
+                    }
                 }
             }
 
             //main nosotros 600px
             .divNosotros {
                 width: 80%;
-
-                .divParrafo {
-                    padding: 5rem 3rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
+                background-position-y: 7.5%;
 
                 .contenedorItemNosotos {
-                    margin-top: 1rem;
-                    margin-bottom: 2rem;
+                    margin: 2rem 1rem;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1fr 1fr 1fr;
@@ -71,7 +71,6 @@
                     .itemNosotros4,
                     .itemNosotros5,
                     .itemNosotros6 {
-                        display: block;
                         margin: 0;
                     }
                 }
@@ -81,8 +80,12 @@
             .divFormulario {
                 width: 70%;
 
+                .encontranos {
+                    padding: 2rem 4rem;
+                }
+
                 form {
-                    padding: 2rem 3rem;
+                    padding: 2rem 4rem;
 
                     .divBotones {
                         display: flex;
@@ -92,24 +95,16 @@
                             width: 45%;
                         }
                     }
-
                 }
             }
 
             //main obras 600px
             .contenedorImg {
+                width: 95%;
+                padding: 3rem 1rem;
                 grid-template-columns: repeat(3, 1fr);
                 grid-auto-rows: 250px;
-                padding: 0px 15px 50px 15px;
                 grid-gap: 15px;
-
-                .itemGaleria {
-                    transition: transform 0.3s ease-in-out;
-                }
-
-                .itemGaleria:hover {
-                    transform: scale(1.01);
-                }
 
                 .itemGaleria:nth-child(6) {
                     grid-column-start: span 2;
@@ -155,14 +150,17 @@
 
             //main servicios 600px
             .listaServicios {
-                width: 70%;
-                text-align: left;
-            }
-        }
+                width: 85%;
+                padding: 3rem 2rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2rem;
 
-        //footer 600px
-        .footer {
-            padding: 0.5rem;
+                .boxServcio1 {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
         }
     }
 }
@@ -173,13 +171,11 @@
 
         //header 1200px
         header {
-            justify-content: start;
+            justify-content: space-between;
 
-            .logoPrincipal {
-                justify-content: start;
-                padding: 1rem;
-                margin: 1rem;
-                height: 100px;
+            .divIcons {
+                display: flex;
+                justify-content: end;
             }
         }
 
@@ -187,67 +183,80 @@
 
             //main index 1200px
             .divIndex {
-                margin: 0rem 2rem 5rem 2rem;
-                display: flex;
-                flex-flow: row;
-                align-items: center;
+                flex-direction: row;
+                width: 90%;
+                padding: 2rem;
 
                 .mainIframe {
                     width: 50%;
-                    margin: 0rem 2rem;
+                    margin: 1rem 2rem;
                     padding: 0;
                 }
 
-                .homeP {
+                .divPIndex {
                     width: 50%;
-                    margin: 0rem 2rem;
+                    margin: 1rem 2rem;
                     padding: 0;
+
+                    .pIndex1,
+                    .pIndex2 {
+                        height: 50%;
+                        width: 100%;
+                        margin: 0.5rem;
+                        padding: 2rem;
+
+                        .homeP {
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
                 }
             }
 
             //main nosotros 1200px
             .divNosotros {
-                width: 80%;
+                background: $bgDivPrincipal;
 
                 .divParrafo {
-                    background: linear-gradient(rgba(53, 75, 89, 0.75), rgba(53, 75, 89, 0.95));
-                    padding: 0;
                     display: flex;
-                    flex-direction: row;
+                    align-items: center;
 
                     .pCont,
                     .divImgNosotros {
                         width: 50%;
                         padding: 2rem;
-                        @include flex (flex, column, center);
 
                         .logoCircular {
                             display: block;
                             width: 80%;
                             margin: auto;
                         }
-
                     }
                 }
 
                 .contenedorItemNosotos {
-                    margin-top: 1rem;
-                    margin-bottom: 2rem;
-                    display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-template-rows: 1fr 1fr;
                     grid-template-areas: "a b c"
                         "d e f";
-                    grid-gap: 1rem;
                 }
             }
 
             //main contacto 1200px
             .divFormulario {
-                width: 50%;
+                flex-direction: row;
+
+                .encontranos {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                }
 
                 form {
-                    padding: 3rem 4rem;
+                    width: 50%;
 
                     .divBotones {
                         .botones {
@@ -259,7 +268,7 @@
 
             //main obras 1200px
             .contenedorImg {
-                width: 80%;
+                width: 85%;
                 grid-template-columns: repeat(4, 1fr);
 
                 .itemGaleria:nth-child(2) {
@@ -294,6 +303,26 @@
                 .itemGaleria:nth-child(20) {
                     grid-column-start: span 1;
                     grid-row-start: span 2;
+                }
+            }
+
+            //main servicios 1200px
+            .listaServicios {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                .boxServcio1 {
+                    height: 30rem;
+                }
+            }
+        }
+
+        //footer 1200px
+        .footer {
+            .footerSocial {
+                .footerSocialLink {
+                    .linkText {
+                        display: block;
+                    }
                 }
             }
         }
